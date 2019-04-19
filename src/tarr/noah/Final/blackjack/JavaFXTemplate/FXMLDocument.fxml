@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="ANCRParent" prefHeight="800.0" prefWidth="1000.0" stylesheets="@../../../../../Assets/stylesheets/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tarr.noah.Final.blackjack.JavaFXTemplate.Controller">
+   <children>
+      <Label layoutX="394.0" layoutY="729.0" prefHeight="46.0" prefWidth="186.0" text="PLAYER" textFill="#ffffff80" AnchorPane.bottomAnchor="20.0">
+         <font>
+            <Font name="Elephant" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="396.0" layoutY="30.0" text="DEALER" textFill="#ffffff66" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="Elephant" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="LBLFinalStanding" alignment="CENTER" contentDisplay="CENTER" layoutX="215.0" layoutY="339.0" prefHeight="120.0" prefWidth="544.0" textFill="#ffffff66">
+         <font>
+            <Font name="Elephant" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="LBLPlrMainCard" layoutX="210.0" layoutY="550.0" prefHeight="35.0" prefWidth="175.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="LBLDlrMainCard" layoutX="210.0" layoutY="150.0" prefHeight="35.0" prefWidth="175.0">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label fx:id="LBLDeck" alignment="CENTER" contentDisplay="CENTER" layoutX="113.0" layoutY="307.0" prefHeight="27.0" prefWidth="70.0" text="DECK" textFill="#ffffff80">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font></Label>
+      <Label fx:id="LBLPlayerInfo" alignment="BOTTOM_LEFT" layoutX="580.0" layoutY="730.0" prefHeight="35.0" prefWidth="140.0" textFill="WHITE" AnchorPane.bottomAnchor="25.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="LBLPlr2ndHandInfo" alignment="BOTTOM_LEFT" layoutX="742.0" layoutY="730.0" prefHeight="35.0" prefWidth="140.0" textFill="WHITE" AnchorPane.bottomAnchor="25.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="LBLDealerInfo" alignment="BOTTOM_LEFT" layoutX="592.0" layoutY="26.0" prefHeight="35.0" prefWidth="140.0" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="714.0" layoutY="280.0" prefHeight="40.0" prefWidth="244.0">
+        <buttons>
+          <Button id="button" fx:id="BTNStartRound" mnemonicParsing="false" onAction="#startRoundAction" prefHeight="30.0" prefWidth="106.0" stylesheets="@../../../../../Assets/stylesheets/style.css" text="Start Round">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button id="button" fx:id="BTNReset" disable="true" mnemonicParsing="false" onAction="#resetAction" stylesheets="@../../../../../Assets/stylesheets/style.css" text="Reset">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+        </buttons>
+      </ButtonBar>
+      <ImageView fitHeight="120.0" layoutX="109.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Assets/Card-Back-Classic.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="IMGDeck1" fitHeight="120.0" layoutX="108.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Assets/Card-Back-Classic.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="IMGDeck2" fitHeight="120.0" layoutX="107.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Assets/Card-Back-Classic.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="IMGDeck3" fitHeight="120.0" layoutX="106.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Assets/Card-Back-Classic.png" />
+         </image>
+      </ImageView>
+      <Button id="button" fx:id="BTNHit" disable="true" layoutX="812.0" layoutY="341.0" mnemonicParsing="false" onAction="#hitAction" prefWidth="70.0" stylesheets="@../../../../../Assets/stylesheets/style.css" text="Hit">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button id="button" fx:id="BTNDouble" disable="true" layoutX="812.0" layoutY="446.0" mnemonicParsing="false" onAction="#doubleAction" prefWidth="70.0" stylesheets="@../../../../../Assets/stylesheets/style.css" text="Double">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button id="button" fx:id="BTNSplit" disable="true" layoutX="812.0" layoutY="498.0" mnemonicParsing="false" onAction="#splitAction" prefWidth="70.0" stylesheets="@../../../../../Assets/stylesheets/style.css" text="Split">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button id="button" fx:id="BTNStand" disable="true" layoutX="812.0" layoutY="393.0" mnemonicParsing="false" onAction="#standAction" prefWidth="70.0" stylesheets="@../../../../../Assets/stylesheets/style.css" text="Stand">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Line endX="100.0" layoutX="847.0" layoutY="382.0" scaleX="0.25" startX="-100.0" stroke="WHITE" />
+      <Line endX="100.0" layoutX="847.0" layoutY="435.0" scaleX="0.25" startX="-100.0" stroke="WHITE" />
+      <Line endX="100.0" layoutX="847.0" layoutY="488.0" scaleX="0.25" startX="-100.0" stroke="WHITE" />
+      <ToggleButton id="helpButton" fx:id="BTNToggleRules" layoutX="50.0" layoutY="50.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" stylesheets="@../../../../../Assets/stylesheets/style.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ToggleButton>
+      <TextArea fx:id="TXTARules" editable="false" layoutX="110.0" layoutY="43.0" prefHeight="200.0" prefWidth="220.0" text="Player Rules:&#10;Hit:&#10;Gives you a new face up card.&#10;Stand:&#10;Ends the turn for that hand&#10;Double Down:&#10;You are delt a face down card&#10;and you end your turn.&#10;You can double once per hand&#10;including if you split cards but&#10;it ends the turn of that hand.&#10;Split:&#10;You can split if you are delt two&#10;cards of the same rank.&#10;(i.e. Ace, Two, King)&#10;You can only split on your first&#10;two cards.&#10;&#10;&#10;Dealer Rules:&#10;The dealer will always stand on&#10;a 17 or higher.&#10;&#10;&#10;BlackJack:&#10;A BlackJack is when you get a 21&#10;on your first 2 delt cards.&#10;If you get a BlackJack it will end&#10;your turn and check to see if&#10;has a BlackJack. &#10;If the dealer has a BlackJack it&#10;is a push. If not the round is&#10;ended and you win.&#10;&#10;Bust:&#10;If your card value goes over 21&#10;you bust and lose.&#10;&#10;Push: &#10;If you and the dealer have the&#10;same card value.&#10;&#10;&#10;Start Round:&#10;Resets the board then deals cards.&#10;&#10;Reset:&#10;Resets the board and the deck.&#10;The deck is automatically reset&#10;when it falls below 15 cards.&#10;&#10;&#10;" visible="false" />
+      <Label fx:id="LBLPlayerChipCount" alignment="BOTTOM_RIGHT" layoutX="238.0" layoutY="740.0" prefHeight="35.0" prefWidth="140.0" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button id="blueChip" fx:id="BTNChipBlue" layoutX="34.0" layoutY="563.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="1">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button id="purpleChip" fx:id="BTNChipPurple" layoutX="68.0" layoutY="615.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="5">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button id="orangeChip" fx:id="BTNChipOrange" layoutX="113.0" layoutY="661.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="10">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button id="greenChip" fx:id="BTNChipGreen" layoutX="166.0" layoutY="691.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="25">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button id="lightBlueChip" fx:id="BTNChipLightBlue" layoutX="223.0" layoutY="711.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="100">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="LBLChipBlue" alignment="CENTER" layoutX="12.0" layoutY="616.0" prefHeight="15.0" prefWidth="39.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Elephant" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="LBLChipPurple" alignment="CENTER" layoutX="47.0" layoutY="668.0" prefHeight="15.0" prefWidth="39.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Elephant" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="LBLChipOrange" alignment="CENTER" layoutX="91.0" layoutY="709.0" prefHeight="15.0" prefWidth="39.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Elephant" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="LBLChipGreen" alignment="CENTER" layoutX="144.0" layoutY="740.0" prefHeight="15.0" prefWidth="39.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Elephant" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="LBLChipLightBlue" alignment="CENTER" layoutX="201.0" layoutY="760.0" prefHeight="15.0" prefWidth="39.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Elephant" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="17.0" layoutY="505.0" prefHeight="46.0" prefWidth="133.0" text="WINNINGS:" textFill="#ffffff80">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="LBLWinnings" alignment="CENTER" contentDisplay="CENTER" layoutX="154.0" layoutY="515.0" prefHeight="27.0" prefWidth="70.0" text="\$$$" textFill="#ffffff80">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="17.0" layoutY="475.0" prefHeight="46.0" prefWidth="133.0" text="BET:" textFill="#ffffff80">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="LBLWinnings1" alignment="CENTER" contentDisplay="CENTER" layoutX="154.0" layoutY="485.0" prefHeight="27.0" prefWidth="70.0" text="\$100" textFill="#ffffff80">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,87 @@
+#AnchorPane
+{
+    -fx-background-image: url("../wood-wallpaper.jpg");
+}
+
+#button
+{
+    -fx-background-color: #242424;
+    -fx-text-fill: #ffffff;
+}
+
+#button:hover
+{
+    -fx-background-color: #111111;
+}
+
+#helpButton
+{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("../help-web-button.png");
+}
+
+#helpButton:selected
+{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("../help-web-button-hover.png");
+}
+
+#blueChip
+{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("../chips/blue-chip.png");
+    -fx-background-size: cover;
+}
+#blueChip:hover
+{
+    -fx-border-color: #fff;
+    -fx-border-radius: 100%;
+}
+
+#purpleChip
+{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("../chips/purple-chip.png");
+    -fx-background-size: cover;
+}
+#purpleChip:hover
+{
+    -fx-border-color: #fff;
+    -fx-border-radius: 100%;
+}
+
+#orangeChip
+{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("../chips/orange-chip.png");
+    -fx-background-size: cover;
+}
+#orangeChip:hover
+{
+    -fx-border-color: #fff;
+    -fx-border-radius: 100%;
+}
+
+#greenChip
+{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("../chips/green-chip.png");
+    -fx-background-size: cover;
+}
+#greenChip:hover
+{
+    -fx-border-color: #fff;
+    -fx-border-radius: 100%;
+}
+
+#lightBlueChip
+{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-image: url("../chips/lightblue-chip.png");
+    -fx-background-size: cover;
+}
+#lightBlueChip:hover
+{
+    -fx-border-color: #fff;
+    -fx-border-radius: 100%;
+}
